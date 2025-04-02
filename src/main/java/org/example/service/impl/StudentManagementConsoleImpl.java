@@ -94,7 +94,7 @@ public class StudentManagementConsoleImpl implements StudentManagement {
     @Override
     public Student remove(int id) {
         Student student = studentDao.find(id);
-        System.out.printf("Do you want to delete student (%s) %s? Y/N \n", student.getId(), student.getId());
+        System.out.printf("Do you want to delete student (%s) %s? Y/N \n", student.getId(), student.getName());
         if (scannerService.getString().equalsIgnoreCase("Y")) {
             System.out.println("Deleting student.");
             studentDao.delete(id);
